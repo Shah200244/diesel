@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Diesel Report Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f5f5f5;
+            padding: 20px;
+        }
+        .container {
+            max-width: 480px;
+            margin: auto;
+            background: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 12px rgba(0,0,0,0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 18px;
+        }
+        label {
+            font-weight: 600;
+            margin-bottom: 6px;
+            display: block;
+        }
+        input, textarea, button {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 14px;
+            border-radius: 6px;
+            border: 1px solid #ccc;
+            font-size: 15px;
+        }
+        button {
+            background: #005ad5;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+        }
+        button:hover {
+            background: #0047aa;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <h2>Diesel Report</h2>
+
+    <form action="https://sheetdb.io/api/v1/u1ioo04ak5leq" method="POST">
+
+        <label>Date</label>
+        <input type="date" name="date" required>
+
+        <label>Diesel Quantity (Litres)</label>
+        <input type="number" name="quantity" step="0.01" required>
+
+        <label>Operator Name</label>
+        <input type="text" name="operator" required>
+
+        <label>Purpose / Message</label>
+        <textarea name="purpose" rows="4"></textarea>
+
+        <label>Ordered By</label>
+        <input type="text" name="Ordered-by" required>
+
+        <button type="submit">Submit Report</button>
+    </form>
+</div>
+
+</body>
+</html>
